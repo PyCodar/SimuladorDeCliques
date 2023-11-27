@@ -40,17 +40,17 @@ class Window(QMainWindow):
         self.label2.setStyleSheet("font: 10pt Times;")
         grid_layout.addWidget(self.label2, 1, 0, 1, 2)  # Adiciona o segundo rótulo ao layout de grade
 
-        # Cria um botão para iniciar os cliques
-        start_button = QPushButton("Iniciar", clicked=self.start_action)
-        grid_layout.addWidget(start_button, 2, 0)  # Adiciona o botão ao layout de grade
-
         # Cria um botão para pausar os cliques
         pause_button = QPushButton("Pausar", clicked=self.pause_action)
-        grid_layout.addWidget(pause_button, 2, 1)  # Adiciona o botão ao layout de grade
+        grid_layout.addWidget(pause_button, 2, 0)  # Adiciona o botão ao layout de grade
 
         # Cria um botão para zerar os cliques
         reset_button = QPushButton("Zerar", clicked=self.reset_action)
-        grid_layout.addWidget(reset_button, 3, 0, 1, 2)  # Adiciona o botão ao layout de grade
+        grid_layout.addWidget(reset_button, 2, 1)  # Adiciona o botão ao layout de grade
+
+        # Cria um botão para iniciar os cliques
+        start_button = QPushButton("Iniciar", clicked=self.start_action)
+        grid_layout.addWidget(start_button, 3, 0, 1, 2)  # Adiciona o botão ao layout de grade
 
         layout.addLayout(grid_layout)  # Adiciona o layout de grade ao layout vertical
 
